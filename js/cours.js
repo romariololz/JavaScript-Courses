@@ -1,17 +1,20 @@
-var meteo = prompt("Quel temps fait-il dehors ?");
-switch (meteo) {
-    case "soleil":
-        console.log("Sortez en t-shirt.");
-        break;
-    case "vent":
-        console.log("Sortez en pull.");
-        break;
-    case "pluie":
-        console.log("Sortez en blouson.");
-        break;
-    case "neige":
-        console.log("Restez au chaud à la maison.");
-        break;
-    default:
-        console.log("Je n'ai pas compris !");
+console.log("Début du while");
+
+var nombre = 1;
+
+while (nombre <= 5) {
+    console.log(nombre);
+    nombre++;
 }
+
+console.log("Fin du while");
+
+var compteur;
+
+console.log("Début du for");
+
+for (compteur = 1; compteur <= 5; compteur++) {
+    console.log(compteur);
+}
+
+console.log("Fin du for");
