@@ -1,20 +1,7 @@
-console.log("Début du while");
-
-var nombre = 1;
-
-while (nombre <= 5) {
-    console.log(nombre);
-    nombre++;
+function direBonjour(prenom, nom) {
+    var message = "Bonjour, " + prenom + " " + nom + " !";
+    return message;
 }
 
-console.log("Fin du while");
-
-var compteur;
-
-console.log("Début du for");
-
-for (compteur = 1; compteur <= 5; compteur++) {
-    console.log(compteur);
-}
-
-console.log("Fin du for");
+console.log(direBonjour("Baptiste", "DUPONT"));
+console.log(direBonjour("Sophie", "GONZALVES"));
