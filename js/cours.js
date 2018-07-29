@@ -1,23 +1,22 @@
-console.log("Je suis une chaîne".length);
+var perso = {
+    nom: "Aurora",
+    sante: 150,
+    force: 25,
 
-var motInitial = "Bora-Bora";
-var motEnMinuscules = motInitial.toLowerCase();
-console.log(motEnMinuscules); // Affiche "bora-bora"
-var motEnMajuscules = motInitial.toUpperCase();
-console.log(motEnMajuscules); // Affiche "BORA-BORA"
+    // Renvoie la description du personnage
+    decrire: function () {
+        var description = this.nom + " a " + this.sante + " points de vie et " +
+            this.force + " en force";
+        return description;
+    }
+};
 
-var chaine = "azerty";
-console.log(chaine === "azerty"); // Affiche true
-console.log(chaine === "qwerty"); // Affiche false
+console.log(perso.decrire());
 
-var sport = "Tennis-ballon"; // 13 caractères
-console.log(sport.charAt(0)); // Affiche "T"
-console.log(sport[0]); // Affiche "T"
-console.log(sport.charAt(6)); // Affiche "-"
-console.log(sport[6]); // Affiche "-"
+// Aurora est blessée par une flèche
+perso.sante = perso.sante - 20;
 
-var prenom = "Odile";
+// Aurora trouve un bracelet de force
+perso.force = perso.force + 10;
 
-for (var i = 0; i < prenom.length; i++) {
-    console.log(prenom[i]);
-}
+console.log(perso.decrire());
