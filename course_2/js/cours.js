@@ -1,13 +1,17 @@
-// Tous les paragraphes
-console.log(document.querySelectorAll("p").length); // Affiche 3
+// Modification du contenu HTML de la liste : ajout d'un langage
+document.getElementById("langages").innerHTML += '<li id="c">C</li>';
 
-// Tous les paragraphes à l'intérieur de l'élément identifié par "contenu"
-console.log(document.querySelectorAll("#contenu p").length); // Affiche 2
+// Suppression du contenu HTML de la liste
+// document.getElementById("langages").innerHTML = "";
 
-// Tous les éléments ayant la classe "existe"
-console.log(document.querySelectorAll(".existe").length); // Affiche 8tsByClassName("existe").length); // Affiche 1
+// Modification du contenu textuel du premier titre
+document.querySelector("h1").textContent += " de programmation";
 
-// Tous les éléments fils de l'élément identifié par "antiques" ayant la classe "existe"
-console.log(document.querySelectorAll("#antiques > .existe").length); // Affiche 1
+// Définition de l'attribut "id" du premier titre
+//document.querySelector("h1").setAttribute("id", "titre");
+document.querySelector("h1").id = "titre";
 
-console.log(document.querySelector("p"));
+var titreElt = document.querySelector("h1"); // Accès au premier titre h1
+titreElt.classList.remove("debut"); // Suppression de la classe "debut"
+titreElt.classList.add("titre"); // Ajout de la classe "titre"
+console.log(titreElt);
